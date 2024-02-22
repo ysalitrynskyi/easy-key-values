@@ -1,0 +1,129 @@
+# Copyright (C) 2024 Yevhen Salitrynskyi
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Easy Key-Values 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/ysalitrynskyi/easy-key-values/issues\n"
+"Last-Translator: Yevhen Salitrynskyi <ysalitrynskyi+wp@gmail.com>\n"
+"Language-Team: Yevhen Salitrynskyi <ysalitrynskyi+wplang@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-02-19T00:06:32+00:00\n"
+"PO-Revision-Date: 2024-02-19T00:06:32+00:00\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: easy-key-values\n"
+
+#. Plugin Name of the plugin
+#: easy-key-values.php
+#: easy-key-values.php:37
+#: easy-key-values.php:39
+#: functions/settings-management.php:10
+msgid "Easy Key-Values"
+msgstr "Easy Key-Values"
+
+#. Description of the plugin
+#: easy-key-values.php
+msgid "Manage key-value pairs. Save custom settings and retrieve using a shortcode or PHP function."
+msgstr "Управление парами ключ-значение. Сохраняйте пользовательские настройки и извлекайте их с помощью шорткода или функции PHP."
+
+#. Author of the plugin
+#: easy-key-values.php
+msgid "Yevhen Salitrynskyi"
+msgstr "Евгений Салитринский"
+
+#: easy-key-values.php:24
+msgid "Your Keys & Values"
+msgstr "Ваши ключи и значения"
+
+#: easy-key-values.php:95
+msgid "Are you sure you want to remove this field?"
+msgstr "Вы уверены, что хотите удалить это поле?"
+
+#: easy-key-values.php:96
+msgid "Are you absolutely sure? This action cannot be undone (after you click \"Save\")"
+msgstr "Вы абсолютно уверены? Это действие нельзя отменить (после нажатия кнопки \"Сохранить\")"
+
+#: easy-key-values.php:97
+msgid "Error: You cannot have a value without a corresponding key."
+msgstr "Ошибка: Невозможно добавить значение без соответствующего ключа."
+
+#: easy-key-values.php:98
+msgid "Options saved (Refresh is not needed)"
+msgstr "Значения сохранены (перезагрузка страницы не требуется)"
+
+#: easy-key-values.php:99
+msgid "Failed to save options!"
+msgstr "Не удалось сохранить!"
+
+#: easy-key-values.php:100
+msgid "Error: Could not connect to server."
+msgstr "Ошибка: Не удалось подключиться к серверу."
+
+#: easy-key-values.php:101
+msgid "You have unsaved changes! Are you sure you want to leave?"
+msgstr "У вас есть несохраненные изменения! Вы уверены, что хотите уйти?"
+
+#: easy-key-values.php:102
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: easy-key-values.php:103
+msgid "Saving..."
+msgstr "Сохранение..."
+
+#: easy-key-values.php:104
+msgid "Error: Duplicate key detected."
+msgstr "Ошибка: Обнаружен дубликат ключа."
+
+#: functions/settings-management.php:20
+msgid "Quick Guide"
+msgstr "Краткое руководство"
+
+#: functions/settings-management.php:21
+msgid "Shortcode:"
+msgstr "Шорткод:"
+
+#: functions/settings-management.php:21
+msgid "Easily display any setting with"
+msgstr "Отобразить любую настройку с помощью"
+
+#: functions/settings-management.php:22
+msgid "PHP:"
+msgstr "PHP:"
+
+#: functions/settings-management.php:22
+msgid "Fetch settings directly in PHP:"
+msgstr "Получение настроек непосредственно в PHP:"
+
+#: functions/settings-management.php:24
+msgid "Need More Than a Plugin?"
+msgstr "Нужна помощь?"
+
+#: functions/settings-management.php:26
+msgid "Love Easy Key-Values? It's just a taste of what we can do. From WordPress, Django and Laravel to Cloud Infrastructure, my team and I are multilingual and dedicated to delivering top-notch work at lightning speed. Let's bring your ideas to life! Email me"
+msgstr "Вам нравится Easy Key-Values? Это всего лишь пример того, что мы можем сделать. WordPress, Django, Laravel, облачная инфраструктура и больше - я и моя команда говорим на многих языках, в том числе и по-русски. Мы стремимся выполнять первоклассную работу с молниеносной скоростью. Давайте воплотим ваши идеи в жизнь! Отправьте мне email"
+
+#: functions/settings-management.php:26
+msgid "here"
+msgstr "сюда"
+
+#: functions/settings-management.php:29
+msgid "Sometimes I answer within 5 minutes!"
+msgstr "Я стремлюсь отвечать в течении 5 минут!"
+
+#: functions/settings-management.php:32
+msgid "Give it a try!"
+msgstr "Попробуйте!"
+
+#: functions/settings-management.php:34
+msgid "Got feedback or ideas? We're all ears. Help us improve, and let's create the perfect solution for you."
+msgstr "Есть отзывы или идеи? Мы слушаем. Помогайте нам совершенствоваться, и мы создадим идеальное решение для вас."
+
+#: functions/settings-management.php:54
+msgid "No saved values yet. Use the \"Add New Pair\" button to get started."
+msgstr "Пока нет сохраненных значений. Воспользуйтесь кнопкой \"Добавить новую пару\", чтобы начать."
+
+#: functions/settings-management.php:70
+msgid "Add New Pair"
+msgstr "Добавить новую пару"
