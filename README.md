@@ -19,9 +19,9 @@ WordPress admin, enhancing security and privacy.
 - **PHP Functionality**: Retrieve values in your theme or plugin with a straightforward PHP function.
 - **Visibility Control**: Decide whether to show or hide specific key-value pairs, making it perfect for sensitive data.
 - **Lightweight and Efficient**: Designed with performance in mind, ensuring minimal impact on your site's speed.
-- **Optional Caching**: Improve performance with optional caching, configurable through `EKV_ENABLE_CACHE`
-  and `EKV_CACHE_DURATION` constants.
-- **Flexible Menu Placement**: Customize the admin menu placement using the `EKV_MENU_LOCATION` constant for better
+- **Optional Caching**: Improve performance with optional caching, configurable through `EKVALUES_ENABLE_CACHE`
+  and `EKVALUES_CACHE_DURATION` constants.
+- **Flexible Menu Placement**: Customize the admin menu placement using the `EKVALUES_MENU_LOCATION` constant for better
   integration.
 
 ### Ideal for a Wide Range of Applications
@@ -49,11 +49,11 @@ data, and a more efficient development process.
 
 ## Advanced Configuration
 
-- **`EKV_ENABLE_CACHE`**: Define this constant in your `wp-config.php` to enable or disable caching for key-value
+- **`EKVALUES_ENABLE_CACHE`**: Define this constant in your `wp-config.php` to enable or disable caching for key-value
   retrievals. Useful for improving performance on high-traffic sites.
-- **`EKV_CACHE_DURATION`**: Customize the caching duration (in seconds) for key-value pairs by defining this constant.
-  Works in conjunction with `EKV_ENABLE_CACHE`.
-- **`EKV_MENU_LOCATION`**: Specify the admin menu location. Set this to "settings_menu" to place the menu under the '
+- **`EKVALUES_CACHE_DURATION`**: Customize the caching duration (in seconds) for key-value pairs by defining this constant.
+  Works in conjunction with `EKVALUES_ENABLE_CACHE`.
+- **`EKVALUES_MENU_LOCATION`**: Specify the admin menu location. Set this to "settings_menu" to place the menu under the '
   Settings' section.
 
 ## 🚀 Looking for custom web development services?
@@ -89,11 +89,11 @@ Thank you for your support!
 
 ### How do I display a value on a post or page?
 
-Simply use the shortcode `[ekv_value key="your_key_name"]` to show the value of a key wherever shortcodes are supported.
+Simply use the shortcode `[ekvalues_value key="your_key_name"]` to show the value of a key wherever shortcodes are supported.
 
 ### Can I access a value within my theme or plugin?
 
-Absolutely, by embedding `<?php echo ekv_get_value('your_key_name'); ?>`, you can easily retrieve and display a value
+Absolutely, by embedding `<?php echo ekvalues_get_value('your_key_name'); ?>`, you can easily retrieve and display a value
 within PHP. For hidden values, ensure proper access control is implemented.
 
 ## Help with Localization

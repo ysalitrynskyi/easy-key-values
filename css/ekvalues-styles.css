@@ -1,64 +1,64 @@
-.ekv-pair {
+.ekvalues-pair {
     padding-bottom: 10px;
     display: flex;
     align-items: center;
 }
 
-.ekv-change-indicator {
+.ekvalues-change-indicator {
     padding-right: 5px;
     font-size: 20px;
     color: grey;
 }
 
-.ekv-pair p {
+.ekvalues-pair p {
     margin: 0;
     display: flex;
     align-items: center;
 }
 
-.ekv-pair input, .ekv-pair button, .ekv-pair textarea {
+.ekvalues-pair input, .ekvalues-pair button, .ekvalues-pair textarea {
     margin-right: 5px;
     flex-grow: 0;
     min-height: 30px;
     padding: 4px 8px;
 }
 
-.ekv-pair input, .ekv-pair button {
+.ekvalues-pair input, .ekvalues-pair button {
     max-height: 30px;
 }
 
-.ekv-pair .ekv-change-indicator {
+.ekvalues-pair .ekvalues-change-indicator {
     padding-right: 10px;
 }
 
-.ekv-pair textarea {
+.ekvalues-pair textarea {
     flex-grow: 3;
 }
 
-.ekv-wrap {
+.ekvalues-wrap {
     width: 100%;
 }
 
 @media screen and (max-width: 782px) {
-    .ekv-wrap {
+    .ekvalues-wrap {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
 
-    .ekv-wrap > div {
+    .ekvalues-wrap > div {
         box-sizing: border-box;
         flex-basis: calc(50% - 10px);
     }
 
-    .ekv-wrap-settings, .ekv-quick-guide {
+    .ekvalues-wrap-settings, .ekvalues-quick-guide {
         display: block!important;
         padding-left: 0!important;
         order: -1;
     }
 }
 
-.ekv-donate, .ekv-donate form {
+.ekvalues-donate, .ekvalues-donate form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +66,7 @@
     width: 100%;
 }
 
-.ekv-remove-pair, .ekv-toggle-visibility, .ekv-toggle-visibility-disabled {
+.ekvalues-remove-pair, .ekvalues-toggle-visibility, .ekvalues-toggle-visibility-disabled {
     flex-shrink: 0;
     width: 30px!important;
     height: 30px!important;
@@ -78,11 +78,11 @@
     margin-right: 5px!important;
 }
 
-#ekv-add-pair {
+#ekvalues-add-pair {
     margin-top: 10px;
 }
 
-.ekv-big-button {
+.ekvalues-big-button {
     background-color: #0085ba;
     border: none;
     color: white;
@@ -97,18 +97,18 @@
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.ekv-big-button:hover {
+.ekvalues-big-button:hover {
     background-color: #005082;
 }
 
-.ekv-big-button:active {
+.ekvalues-big-button:active {
     transform: scale(0.98);
 }
 
-.ekv-ft-14 {
+.ekvalues-ft-14 {
     font-size: 14px;
 }
 
-.ekv-pair button.ekv-toggle-visibility, .ekv-pair button.ekv-toggle-visibility-disabled {
+.ekvalues-pair button.ekvalues-toggle-visibility, .ekvalues-pair button.ekvalues-toggle-visibility-disabled {
     width: 34px!important;
 }

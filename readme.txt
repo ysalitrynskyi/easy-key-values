@@ -25,8 +25,8 @@ Use it for storing API keys, site settings, or showing content simply and quickl
 - PHP Functionality: Retrieve values in your theme or plugin with a straightforward PHP function.
 - Visibility Control: Decide whether to show or hide specific key-value pairs, making it perfect for sensitive data.
 - Lightweight and Efficient: Designed with performance in mind, ensuring minimal impact on your site's speed.
-- Optional Caching: Improve performance with optional caching, configurable through `EKV_ENABLE_CACHE` and `EKV_CACHE_DURATION` constants.
-- Flexible Menu Placement: Customize the admin menu placement using the `EKV_MENU_LOCATION` constant for better integration.
+- Optional Caching: Improve performance with optional caching, configurable through `EKVALUES_ENABLE_CACHE` and `EKVALUES_CACHE_DURATION` constants.
+- Flexible Menu Placement: Customize the admin menu placement using the `EKVALUES_MENU_LOCATION` constant for better integration.
 
 = Perfect for a Variety of Use Cases =
 
@@ -59,16 +59,16 @@ Open to improvement suggestions and eager to tackle your next project, let's col
 == Frequently Asked Questions ==
 
 = How do I display a value in a post or page? =
-Use the shortcode `[ekv_value key="your_key_name"]` to display the value of a key anywhere shortcodes are supported.
+Use the shortcode `[ekvalues_value key="your_key_name"]` to display the value of a key anywhere shortcodes are supported.
 
 = Can I retrieve a value in my theme or plugin? =
-Yes, use `<?php echo ekv_get_value('your_key_name'); ?>` to retrieve and display a value within PHP. For hidden values, ensure proper access control is implemented.
+Yes, use `<?php echo ekvalues_get_value('your_key_name'); ?>` to retrieve and display a value within PHP. For hidden values, ensure proper access control is implemented.
 
-= What are `EKV_ENABLE_CACHE` and `EKV_CACHE_DURATION`? =
-These constants allow you to enable caching (`EKV_ENABLE_CACHE`) for improved performance and customize the duration (`EKV_CACHE_DURATION`) of the cache in seconds. Define these in your `wp-config.php` for advanced performance tuning.
+= What are `EKVALUES_ENABLE_CACHE` and `EKVALUES_CACHE_DURATION`? =
+These constants allow you to enable caching (`EKVALUES_ENABLE_CACHE`) for improved performance and customize the duration (`EKVALUES_CACHE_DURATION`) of the cache in seconds. Define these in your `wp-config.php` for advanced performance tuning.
 
 = How can I customize the admin menu placement? =
-Define the `EKV_MENU_LOCATION` constant in your `wp-config.php` file. Setting it to "settings_menu" places the plugin's menu under the 'Settings' section, offering a more integrated admin interface experience.
+Define the `EKVALUES_MENU_LOCATION` constant in your `wp-config.php` file. Setting it to "settings_menu" places the plugin's menu under the 'Settings' section, offering a more integrated admin interface experience.
 
 == Screenshots ==
 

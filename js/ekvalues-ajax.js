@@ -23,16 +23,16 @@ jQuery(document).ready(function($) {
         var currentKey = $pair.find('input[type="text"]').val();
         var currentValue = $pair.find('textarea').val();
         if (originalKey === currentKey && originalValue === currentValue && originalVisibility === currentVisibility) {
-            $pair.find('.ekv-change-indicator').text('✅').css('color', 'green');
+            $pair.find('.ekvalues-change-indicator').text('✅').css('color', 'green');
         } else {
-            $pair.find('.ekv-change-indicator').text('🔸').css('color', 'red');
+            $pair.find('.ekvalues-change-indicator').text('🔸').css('color', 'red');
         }
     }
 
     function addIndicator() {
-        $('.ekv-pair').each(function() {
-            if ($(this).find('.ekv-change-indicator').length === 0) {
-                $(this).prepend('<span class="ekv-change-indicator" style="padding-right: 10px; font-size: 20px; color: grey;">✅</span>');
+        $('.ekvalues-pair').each(function() {
+            if ($(this).find('.ekvalues-change-indicator').length === 0) {
+                $(this).prepend('<span class="ekvalues-change-indicator" style="padding-right: 10px; font-size: 20px; color: grey;">✅</span>');
             }
             $(this).find('input[type="text"], input[type="hidden"], textarea').each(function() {
                 $(this).data('original-value', $(this).val());
@@ -41,28 +41,28 @@ jQuery(document).ready(function($) {
     }
     addIndicator();
 
-    $('body').on('click', '#ekv-add-pair', function(e) {
+    $('body').on('click', '#ekvalues-add-pair', function(e) {
         e.preventDefault();
-        var index = $('.ekv-pair').length;
-        var html = `<div class='ekv-pair'>
-                        <span class='ekv-change-indicator'>✅</span>
-                        <input name='ekv_options[${index}][key]' size='20' type='text' />
-                        <textarea name='ekv_options[${index}][value]' rows='1'></textarea>
-                        <button class='button ekv-toggle-visibility dashicons dashicons-visibility' type='button'></button>
-                        <input type='hidden' name='ekv_options[${index}][visibility]' value='1' />
-                        <button class='button ekv-remove-pair' type='button'>X</button>
+        var index = $('.ekvalues-pair').length;
+        var html = `<div class='ekvalues-pair'>
+                        <span class='ekvalues-change-indicator'>✅</span>
+                        <input name='ekvalues_options[${index}][key]' size='20' type='text' />
+                        <textarea name='ekvalues_options[${index}][value]' rows='1'></textarea>
+                        <button class='button ekvalues-toggle-visibility dashicons dashicons-visibility' type='button'></button>
+                        <input type='hidden' name='ekvalues_options[${index}][visibility]' value='1' />
+                        <button class='button ekvalues-remove-pair' type='button'>X</button>
                     </div>`;
-        $(html).insertBefore('#ekv-add-pair');
+        $(html).insertBefore('#ekvalues-add-pair');
         addIndicator();
-        if ($('#ekv-key-value-pairs').children().length === 1 && $('#ekv-key-value-pairs').children().first().is('p')) {
-            $('#ekv-key-value-pairs').children().first().remove();
+        if ($('#ekvalues-pairs').children().length === 1 && $('#ekvalues-pairs').children().first().is('p')) {
+            $('#ekvalues-pairs').children().first().remove();
         }
     });
 
-    $('body').on('click', '.ekv-toggle-visibility', function(e) {
+    $('body').on('click', '.ekvalues-toggle-visibility', function(e) {
         e.preventDefault();
         var $this = $(this);
-        var $pair = $this.closest('.ekv-pair');
+        var $pair = $this.closest('.ekvalues-pair');
         var $visibilityInput = $pair.find('input[type="hidden"]');
         var isVisible = $visibilityInput.val() === '1';
         if ($this.hasClass('disabled')) {
@@ -80,39 +80,39 @@ jQuery(document).ready(function($) {
         updateIndicator($pair);
     });
 
-    $('body').on('click', '.ekv-remove-pair', function(e) {
+    $('body').on('click', '.ekvalues-remove-pair', function(e) {
         e.preventDefault();
-        var keyInput = $(this).closest('.ekv-pair').find('input[type="text"]').val();
-        var valueTextarea = $(this).closest('.ekv-pair').find('textarea').val();
+        var keyInput = $(this).closest('.ekvalues-pair').find('input[type="text"]').val();
+        var valueTextarea = $(this).closest('.ekvalues-pair').find('textarea').val();
         var keyIsEmpty = !keyInput || keyInput.trim() === '';
         var valueIsEmpty = !valueTextarea || valueTextarea.trim() === '';
         if (keyIsEmpty && valueIsEmpty) {
-            $(this).closest('.ekv-pair').remove();
+            $(this).closest('.ekvalues-pair').remove();
         } else {
             if (confirm(ekvLang.confirmRemove) && confirm(ekvLang.confirmRemoveSure)) {
-                $(this).closest('.ekv-pair').remove();
+                $(this).closest('.ekvalues-pair').remove();
             }
         }
     });
 
     $('body').on('input', 'input[type="text"], textarea', function() {
-        updateIndicator($(this).closest('.ekv-pair'));
+        updateIndicator($(this).closest('.ekvalues-pair'));
     });
 
-    $('#ekv-form').submit(function(e) {
+    $('#ekvalues-form').submit(function(e) {
         e.preventDefault();
         var isValid = true;
         var keys = {};
 
-        var disabledInputs = $('.ekv-pair').find('input:disabled, textarea:disabled').prop('disabled', false);
-        $('.ekv-pair').each(function(index) {
+        var disabledInputs = $('.ekvalues-pair').find('input:disabled, textarea:disabled').prop('disabled', false);
+        $('.ekvalues-pair').each(function(index) {
             $(this).find('input, textarea').each(function() {
                 var name = $(this).attr('name').replace(/\[\d+\]/, '[' + index + ']');
                 $(this).attr('name', name);
             });
         });
 
-        $('.ekv-pair').each(function(index) {
+        $('.ekvalues-pair').each(function(index) {
             var keyInput = $(this).find('input[type="text"]').val();
             if (keyInput === "0") {
                 alert("Key value '0' is not allowed.");
@@ -126,7 +126,7 @@ jQuery(document).ready(function($) {
             return;
         }
 
-        $('.ekv-pair').each(function() {
+        $('.ekvalues-pair').each(function() {
             var keyInput = sanitizeTextField($(this).find('input[type="text"]').val());
             var valueTextarea = sanitizeTextField($(this).find('textarea').val());
             if (keyInput && keys[keyInput]) {
@@ -152,7 +152,7 @@ jQuery(document).ready(function($) {
         saveButton.val(ekvLang.saving).prop('disabled', true);
 
         var data = {
-            'action': 'ekv_save_options',
+            'action': 'ekvalues_save_options',
             'nonce': ekvLang.nonce,
             'options': $(this).serialize()
         };
@@ -163,8 +163,8 @@ jQuery(document).ready(function($) {
             if (response.success) {
                 alert(ekvLang.optionsSaved);
                 window.onbeforeunload = null;
-                $('.ekv-pair').each(function() {
-                    $(this).find('.ekv-change-indicator').text('✅');
+                $('.ekvalues-pair').each(function() {
+                    $(this).find('.ekvalues-change-indicator').text('✅');
                     $(this).find('input[type="text"], textarea').each(function() {
                         $(this).data('original-value', $(this).val());
                     });
