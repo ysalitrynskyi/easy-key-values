@@ -14,12 +14,12 @@ function ekvalues_get_value($key, $bypass_cache = false) {
         }
     }
 
-    global $sorted_options;
-    if ($sorted_options === null) {
-        $sorted_options = get_option('ekvalues_options', []);
+    global $ekvalues_sorted_options;
+    if ($ekvalues_sorted_options === null) {
+        $ekvalues_sorted_options = get_option('ekvalues_options', []);
     }
 
-    $value = ekvalues_binarySearch($sorted_options, $key);
+    $value = ekvalues_binarySearch($ekvalues_sorted_options, $key);
 
     if ($is_cache_enabled && wp_using_ext_object_cache() && !$bypass_cache) {
         wp_cache_set($cache_key, $value, 'ekvalues_values', $cache_duration);

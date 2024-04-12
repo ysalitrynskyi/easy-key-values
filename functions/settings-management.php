@@ -72,8 +72,10 @@ function ekvalues_key_value_setting() {
 }
 
 function ekvalues_options_validate($input) {
+    parse_str($input, $options);
+    $options = $options['ekvalues_options'] ?? [];
     $new_input = array();
-    foreach ($input as $pair) {
+    foreach ($options as $pair) {
         if (!empty($pair['key']) && isset($pair['visibility'])) {
             $sanitized_key = sanitize_text_field($pair['key']);
             $sanitized_value = sanitize_text_field($pair['value']);
@@ -91,10 +93,8 @@ function ekvalues_save_options() {
         wp_die('Unauthorized user');
     }
 
-    $options_raw = isset($_POST['options']) ? $_POST['options'] : '';
-    parse_str($options_raw, $parsed_options);
     $existing_options = get_option('ekvalues_options', []);
-    $sanitized_options = ekvalues_options_validate($parsed_options['ekvalues_options'] ?? []);
+    $sanitized_options = ekvalues_options_validate($_POST['options'] ?? '');
     foreach ($sanitized_options as &$pair) {
         $existing_pair = ekvalues_array_find($existing_options, function($ep) use ($pair) {
             return $ep['key'] === $pair['key'];
