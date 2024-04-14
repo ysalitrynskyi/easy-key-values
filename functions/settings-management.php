@@ -72,9 +72,15 @@ function ekvalues_key_value_setting() {
 }
 
 function ekvalues_options_validate($input) {
-    parse_str($input, $options);
-    $options = $options['ekvalues_options'] ?? [];
     $new_input = array();
+
+    if (is_string($input)) {
+        parse_str($input, $parsed);
+        $options = $parsed['ekvalues_options'] ?? [];
+    } else {
+        $options = isset($input[0]['key']) ? $input : ($input['ekvalues_options'] ?? []);
+    }
+
     foreach ($options as $pair) {
         if (!empty($pair['key']) && isset($pair['visibility'])) {
             $sanitized_key = sanitize_text_field($pair['key']);
