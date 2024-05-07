@@ -76,8 +76,8 @@ Your contribution helps us continue developing innovative tools and supports the
 If you prefer to use cryptocurrency, here are the wallets you can send your support to:
 
 - **Bitcoin:** `126MRj4UdQgoYA8TrWjvuBgDnwtCQ1AT2C`
-- **Bitcoin (BEP20):** `0xf53d079b7cc105d338b16b6ce812121d295eee70`
-- **Ethereum (ERC20, BEP20):** `0xf53d079b7cc105d338b16b6ce812121d295eee70`
+- **Bitcoin (BEP20):** `0x5cf16b35348ebc0b6f7d26f0fcbb91bc0c8da9c1`
+- **Ethereum (ERC20, BEP20):** `0x5cf16b35348ebc0b6f7d26f0fcbb91bc0c8da9c1`
 - **USDT (TRC20):** `THfZPJNi5hLqg3FMVgeT4iy8PnsSpHzxx3`
 - **USDC (XLM):** `GABFQIK63R2NETJM7T673EAMZN4RJLLGP3OFUEJU5SZVTGWUKULZJNL6` (MEMO: `341286132`)
 - **Ripple (XRP):** `rNxp4h8apvRis6mJf9Sh8C6iRxfrDWN7AV` (MEMO: `372541950`)
@@ -103,6 +103,10 @@ We're looking to make **Easy Key-Values** accessible to even more users by suppo
 This effort not only helps the plugin reach a wider audience but also supports the open-source community in creating tools that are more inclusive and accessible. If you're interested in contributing, please reach out at [ysalitrynskyi+wp@gmail.com](mailto:ysalitrynskyi+wp@gmail.com) or open a Pull Request.
 
 ## Changelog
+
+### 1.0.1
+
+- Test with WordPress 6.5.3
 
 ### 1.0.0
 

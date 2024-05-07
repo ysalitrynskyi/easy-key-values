@@ -2,7 +2,7 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Easy Key-Values 1.0.0\n"
+"Project-Id-Version: Easy Key-Values 1.0.1\n"
 "Report-Msgid-Bugs-To: https://github.com/ysalitrynskyi/easy-key-values/issues\n"
 "Last-Translator: Yevhen Salitrynskyi <ysalitrynskyi+wp@gmail.com>\n"
 "Language-Team: Yevhen Salitrynskyi <ysalitrynskyi+wplang@gmail.com>\n"

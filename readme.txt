@@ -5,8 +5,8 @@ Email: ysalitrynskyi+wp@gmail.com
 Tags: Custom Fields, Environmental Variables, API Key Management, Configuration Storage, Vault
 Requires PHP: 7.4
 Requires at least: 5.2
-Tested up to: 6.4.3
-Stable tag: 1.0.0
+Tested up to: 6.5.3
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -75,6 +75,9 @@ Define the `EKVALUES_MENU_LOCATION` constant in your `wp-config.php` file. Setti
 1. The admin interface for managing key-value pairs, including visibility control options.
 
 == Changelog ==
+
+= 1.0.1 =
+* Test with WordPress 6.5.3
 
 = 1.0.0 =
 * Initial release

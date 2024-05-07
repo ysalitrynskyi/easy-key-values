@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Easy Key-Values
  * Description: Manage key-value pairs. Save custom settings and retrieve using a shortcode or PHP function.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Yevhen Salitrynskyi
  * Author's Email: ysalitrynskyi+wp@gmail.com
  * Author's LinkedIn: https://www.linkedin.com/in/yevhen-salitrynskyi/
@@ -93,7 +93,7 @@ function ekvalues_enqueue_scripts($hook) {
     if (!str_contains($hook, 'ekvalues_settings')) {
         return;
     }
-    wp_enqueue_script('ekvalues-ajax', plugin_dir_url(__FILE__) . 'js/ekvalues-ajax.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('ekvalues-ajax', plugin_dir_url(__FILE__) . 'js/ekvalues-ajax.js', array('jquery'), '1.0.1', true);
     wp_localize_script('ekvalues-ajax', 'ekvLang', array(
         'ajaxurl' => admin_url('admin-ajax.php'),
         'nonce' => wp_create_nonce('ekvalues_nonce'),
@@ -113,7 +113,7 @@ function ekvalues_enqueue_scripts($hook) {
 add_action('admin_enqueue_scripts', 'ekvalues_enqueue_admin_styles');
 function ekvalues_enqueue_admin_styles($hook) {
     if (strpos($hook, 'ekvalues_settings') !== false) {
-        wp_enqueue_style('ekvalues-admin-styles', plugins_url('css/ekvalues-styles.css', __FILE__), [], '1.0.0');
+        wp_enqueue_style('ekvalues-admin-styles', plugins_url('css/ekvalues-styles.css', __FILE__), [], '1.0.1');
     }
 }
 
